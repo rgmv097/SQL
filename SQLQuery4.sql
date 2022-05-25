@@ -39,7 +39,9 @@ on Notebooks.Brand_id=Brands.Id where Price between 100 and 500 or Price>1000
 -- BrandName-nda 'a' olan notebooklari geri qaytaran
 Select Notebooks.Name,Brands.Name as 'Brand Name',Price from Notebooks
 inner join Brands
-on Notebooks.Brand_id=Brands.Id where CHARINDEX('a',Brands.Name)>0
+on  Notebooks.Brand_id=Brands.Id where Brands.Name LIKE 'a%'
+
+
 
 
 
